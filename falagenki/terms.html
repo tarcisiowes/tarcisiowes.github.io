@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Uso — fala GENKI</title>
+  <style>
+    :root {
+      --bg: #fafaf8;
+      --fg: #1a1a1a;
+      --muted: #666;
+      --accent: #c0392b;
+      --border: #e0ddd8;
+      --font: 'Noto Sans JP', 'Segoe UI', system-ui, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.7;
+      padding: 2rem 1.25rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .app-name { color: var(--accent); }
+    .updated {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 2rem;
+      display: block;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin-bottom: 1rem; }
+    ul {
+      margin: 0 0 1rem 1.25rem;
+      list-style: disc;
+    }
+    li { margin-bottom: 0.35rem; }
+    .lang-toggle {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .lang-toggle button {
+      background: none;
+      border: 1.5px solid var(--border);
+      padding: 0.35rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-family: var(--font);
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+    .lang-toggle button.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .lang { display: none; }
+    .lang.active { display: block; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Termos de Uso — <span class="app-name">fala GENKI</span></h1>
+<span class="updated" id="date-line"></span>
+
+<div class="lang-toggle">
+  <button class="active" onclick="switchLang('pt')">Português</button>
+  <button onclick="switchLang('en')">English</button>
+</div>
+
+<!-- PT-BR -->
+<div id="lang-pt" class="lang active">
+
+<h2>1. Aceitação</h2>
+<p>Ao usar o <strong>fala GENKI</strong>, você concorda com estes termos. Se não concordar, não utilize o aplicativo.</p>
+
+<h2>2. Descrição do serviço</h2>
+<p>O fala GENKI é um aplicativo gratuito de aprendizado de japonês para falantes de português brasileiro. O app oferece lições, exercícios de revisão com repetição espaçada, prática de kana e uma experiência de aprendizado com música. Todo o conteúdo funciona offline no seu dispositivo.</p>
+
+<h2>3. Uso aceitável</h2>
+<p>Você concorda em usar o aplicativo apenas para fins de aprendizado pessoal e não reproduzir, distribuir ou modificar o conteúdo do app sem autorização.</p>
+
+<h2>4. Propriedade intelectual</h2>
+<p>O conteúdo do fala GENKI — incluindo textos de lições, ilustrações, design de interface e o personagem Daru-sensei — é propriedade de Showa Soul. A música incluída no modo City Pop é utilizada sob os termos de licenciamento aplicáveis.</p>
+
+<h2>5. Conteúdo educacional</h2>
+<p>O fala GENKI é uma ferramenta de apoio ao aprendizado. Não garantimos resultados de proficiência específicos. O conteúdo é preparado com cuidado, mas pode conter imprecisões. Não substituímos ensino formal ou certificação.</p>
+
+<h2>6. Disponibilidade</h2>
+<p>O app funciona offline e não depende de servidores para seu uso principal. Podemos lançar atualizações que alterem funcionalidades, adicionem conteúdo ou modifiquem estes termos.</p>
+
+<h2>7. Feedback</h2>
+<p>Se você enviar feedback pelo botão integrado ao app, concorda que podemos usar essas sugestões para melhorar o produto sem obrigação de atribuição ou compensação.</p>
+
+<h2>8. Isenção de garantias</h2>
+<p>O app é fornecido "como está". Não oferecemos garantias expressas ou implícitas sobre disponibilidade contínua, ausência de bugs ou adequação a qualquer finalidade específica.</p>
+
+<h2>9. Limitação de responsabilidade</h2>
+<p>A Showa Soul não se responsabiliza por danos diretos, indiretos ou consequenciais decorrentes do uso ou impossibilidade de uso do aplicativo, incluindo perda de dados de progresso.</p>
+
+<h2>10. Alterações</h2>
+<p>Podemos atualizar estes termos a qualquer momento. A versão vigente estará sempre disponível nesta página, com a data de atualização no topo.</p>
+
+<h2>11. Contato</h2>
+<p>Dúvidas sobre estes termos: <strong>showasoul@icloud.com</strong></p>
+
+</div>
+
+<!-- EN -->
+<div id="lang-en" class="lang">
+
+<h2>1. Acceptance</h2>
+<p>By using <strong>fala GENKI</strong>, you agree to these terms. If you do not agree, do not use the app.</p>
+
+<h2>2. Description of service</h2>
+<p>fala GENKI is a free Japanese-learning app for Brazilian Portuguese speakers. The app offers lessons, spaced-repetition review exercises, kana practice, and a music-based learning experience. All content works offline on your device.</p>
+
+<h2>3. Acceptable use</h2>
+<p>You agree to use the app only for personal learning purposes and not to reproduce, distribute, or modify the app's content without authorization.</p>
+
+<h2>4. Intellectual property</h2>
+<p>fala GENKI content — including lesson texts, illustrations, interface design, and the character Daru-sensei — is the property of Showa Soul. Music included in the City Pop mode is used under applicable licensing terms.</p>
+
+<h2>5. Educational content</h2>
+<p>fala GENKI is a learning support tool. We do not guarantee specific proficiency outcomes. Content is carefully prepared but may contain inaccuracies. We do not replace formal education or certification.</p>
+
+<h2>6. Availability</h2>
+<p>The app works offline and does not depend on servers for its main functionality. We may release updates that change features, add content, or modify these terms.</p>
+
+<h2>7. Feedback</h2>
+<p>If you submit feedback through the app's built-in button, you agree that we may use those suggestions to improve the product without obligation of attribution or compensation.</p>
+
+<h2>8. Disclaimer of warranties</h2>
+<p>The app is provided "as is." We make no express or implied warranties regarding continuous availability, absence of bugs, or fitness for any particular purpose.</p>
+
+<h2>9. Limitation of liability</h2>
+<p>Showa Soul is not responsible for direct, indirect, or consequential damages arising from the use or inability to use the app, including loss of progress data.</p>
+
+<h2>10. Changes</h2>
+<p>We may update these terms at any time. The current version will always be available on this page, with the update date at the top.</p>
+
+<h2>11. Contact</h2>
+<p>Questions about these terms: <strong>showasoul@icloud.com</strong></p>
+
+</div>
+
+<footer>
+  © 2026 Showa Soul. fala GENKI.
+</footer>
+
+<script>
+  document.getElementById('date-line').textContent =
+    (document.documentElement.lang === 'pt-BR' ? 'Última atualização: ' : 'Last updated: ') +
+    'maio de 2026';
+
+  function switchLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-toggle button').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelector('.lang-toggle button[onclick*="' + lang + '"]').classList.add('active');
+  }
+</script>
+
+</body>
+</html>
