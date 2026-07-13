@@ -1,188 +1,319 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termos de Uso — fala GENKI</title>
-  <style>
-    :root {
-      --bg: #fafaf8;
-      --fg: #1a1a1a;
-      --muted: #666;
-      --accent: #c0392b;
-      --border: #e0ddd8;
-      --font: 'Noto Sans JP', 'Segoe UI', system-ui, sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: var(--font);
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.7;
-      padding: 2rem 1.25rem;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-    .app-name { color: var(--accent); }
-    .updated {
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-bottom: 2rem;
-      display: block;
-    }
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-      padding-bottom: 0.25rem;
-      border-bottom: 1px solid var(--border);
-    }
-    p { margin-bottom: 1rem; }
-    ul {
-      margin: 0 0 1rem 1.25rem;
-      list-style: disc;
-    }
-    li { margin-bottom: 0.35rem; }
-    .lang-toggle {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-    .lang-toggle button {
-      background: none;
-      border: 1.5px solid var(--border);
-      padding: 0.35rem 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      font-family: var(--font);
-      color: var(--muted);
-      transition: all 0.2s;
-    }
-    .lang-toggle button.active {
-      border-color: var(--accent);
-      color: var(--accent);
-      font-weight: 600;
-    }
-    .lang { display: none; }
-    .lang.active { display: block; }
-    footer {
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.8rem;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Termos de Uso | falaGENKI</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      body {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 20px 64px;
+        line-height: 1.65;
+      }
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 4px;
+      }
+      h2 {
+        font-size: 1.15rem;
+        margin-top: 32px;
+      }
+      .muted,
+      footer {
+        opacity: 0.72;
+      }
+      .switcher {
+        display: flex;
+        gap: 8px;
+        margin: 24px 0;
+      }
+      button {
+        min-height: 44px;
+        padding: 0 16px;
+        border: 1px solid currentColor;
+        border-radius: 10px;
+        background: transparent;
+        color: inherit;
+      }
+      button[aria-pressed="true"] {
+        font-weight: 700;
+      }
+      [data-lang] {
+        display: none;
+      }
+      [data-lang].active {
+        display: block;
+      }
+      a {
+        color: inherit;
+        font-weight: 600;
+      }
+      footer {
+        margin-top: 48px;
+        border-top: 1px solid color-mix(in srgb, currentColor 24%, transparent);
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 data-lang="pt" class="active">Termos de Uso do falaGENKI</h1>
+    <h1 data-lang="en">falaGENKI Terms of Use</h1>
+    <p data-lang="pt" class="muted active">
+      Última atualização: 13 de julho de 2026
+    </p>
+    <p data-lang="en" class="muted">Last updated: July 13, 2026</p>
+    <div class="switcher" aria-label="Idioma">
+      <button type="button" data-switch="pt" aria-pressed="true">
+        Português
+      </button>
+      <button type="button" data-switch="en" aria-pressed="false">
+        English
+      </button>
+    </div>
 
-<h1>Termos de Uso — <span class="app-name">fala GENKI</span></h1>
-<span class="updated" id="date-line"></span>
+    <main data-lang="pt" class="active">
+      <h2>1. Aceitação e contato</h2>
+      <p>
+        Ao usar o falaGENKI, você concorda com estes termos e com a Política de
+        Privacidade. O app é disponibilizado sob a marca Showa Soul pela pessoa
+        física ou jurídica identificada como vendedora na App Store. Estes
+        termos complementam o contrato de licença padrão aplicável da Apple e
+        não afastam direitos obrigatórios do consumidor. Dúvidas podem ser
+        enviadas para
+        <a href="mailto:showasoul@icloud.com">showasoul@icloud.com</a>.
+      </p>
 
-<div class="lang-toggle">
-  <button class="active" onclick="switchLang('pt')">Português</button>
-  <button onclick="switchLang('en')">English</button>
-</div>
+      <h2>2. Serviço</h2>
+      <p>
+        O falaGENKI oferece estudo de japonês em português brasileiro com
+        lições, kana, revisão espaçada, decks, lembretes e aprendizagem com
+        música. O núcleo gratuito funciona de forma local. A primeira versão na
+        App Store é destinada ao iPhone e não inclui app para Apple Watch nem
+        suporte dedicado ao iPad.
+      </p>
+      <p>
+        Uma conta opcional salva na nuvem somente as configurações do plano de
+        estudo — nível, tempo diário, interesses, lembretes e conclusão da
+        configuração inicial. Progresso, histórico de revisão, decks, XP e
+        sequência permanecem locais. A conta passa a ser necessária se você
+        optar por comprar, restaurar ou acessar o Fala Pro.
+      </p>
 
-<!-- PT-BR -->
-<div id="lang-pt" class="lang active">
+      <h2>3. Conta</h2>
+      <p>
+        Você é responsável por usar um e-mail ao qual tenha acesso e por manter
+        seu aparelho seguro. Podemos suspender ou limitar uso abusivo,
+        fraudulento ou que viole estes termos. A exclusão da conta remove o
+        login e os dados associados na nuvem, mas não remove automaticamente os
+        dados locais deste iPhone.
+      </p>
 
-<h2>1. Aceitação</h2>
-<p>Ao usar o <strong>fala GENKI</strong>, você concorda com estes termos. Se não concordar, não utilize o aplicativo.</p>
+      <h2>4. Fala Pro e renovação automática</h2>
+      <p>
+        O Fala Pro é uma assinatura opcional. Antes de confirmar, o app e a App
+        Store mostram o produto, o preço localizado, a moeda, a duração e
+        eventual período promocional. A cobrança é feita na sua Conta Apple após
+        a confirmação.
+      </p>
+      <p>
+        A assinatura é renovada automaticamente, salvo se a renovação for
+        desativada pelo menos 24 horas antes do fim do período atual. A Conta
+        Apple pode ser cobrada pela renovação nas 24 horas anteriores ao
+        término. Você pode gerenciar ou cancelar em Ajustes da Conta Apple e
+        pode usar Restaurar compras no app.
+      </p>
+      <p>
+        Excluir a conta falaGENKI não cancela a assinatura Apple. Cancele a
+        assinatura separadamente antes ou depois da exclusão. Pedidos de
+        reembolso e regras de cobrança são tratados pela Apple conforme as
+        políticas da App Store.
+      </p>
 
-<h2>2. Descrição do serviço</h2>
-<p>O fala GENKI é um aplicativo gratuito de aprendizado de japonês para falantes de português brasileiro. O app oferece lições, exercícios de revisão com repetição espaçada, prática de kana e uma experiência de aprendizado com música. Todo o conteúdo funciona offline no seu dispositivo.</p>
+      <h2>5. Conteúdo premium e disponibilidade</h2>
+      <p>
+        Conteúdo Fala Pro pode exigir conta, assinatura ativa e internet para
+        download ou verificação. Depois de baixado, parte do conteúdo pode ficar
+        disponível offline por um período limitado. Podemos corrigir, substituir
+        ou retirar conteúdo quando necessário, preservando os direitos legais do
+        consumidor.
+      </p>
 
-<h2>3. Uso aceitável</h2>
-<p>Você concorda em usar o aplicativo apenas para fins de aprendizado pessoal e não reproduzir, distribuir ou modificar o conteúdo do app sem autorização.</p>
+      <h2>6. Uso aceitável</h2>
+      <p>
+        Use o app para aprendizado pessoal. Não copie, venda, redistribua,
+        contorne controles de acesso, explore vulnerabilidades, sobrecarregue
+        serviços ou use conteúdo e marcas sem autorização. Importações de
+        terceiros, como decks, devem respeitar direitos autorais e licenças.
+      </p>
 
-<h2>4. Propriedade intelectual</h2>
-<p>O conteúdo do fala GENKI — incluindo textos de lições, ilustrações, design de interface e o personagem Daru-sensei — é propriedade de Showa Soul. A música incluída no modo City Pop é utilizada sob os termos de licenciamento aplicáveis.</p>
+      <h2>7. Propriedade intelectual e direitos de conteúdo</h2>
+      <p>
+        Textos, lições, software, interface, ilustrações, áudio, marca e o
+        personagem Daru-sensei pertencem ao operador ou são usados sob licença.
+        Nenhuma licença comercial ou de redistribuição é concedida. Conteúdo
+        enviado por você continua sendo seu; ao enviar feedback, você permite
+        que usemos a sugestão para melhorar o produto sem obrigação de
+        atribuição ou pagamento.
+      </p>
 
-<h2>5. Conteúdo educacional</h2>
-<p>O fala GENKI é uma ferramenta de apoio ao aprendizado. Não garantimos resultados de proficiência específicos. O conteúdo é preparado com cuidado, mas pode conter imprecisões. Não substituímos ensino formal ou certificação.</p>
+      <h2>8. Educação, disponibilidade e garantias</h2>
+      <p>
+        O falaGENKI é uma ferramenta educacional e não garante nível específico
+        de proficiência ou certificação. Buscamos manter o serviço correto e
+        disponível, mas falhas, manutenção, indisponibilidade de provedores e
+        perda de dados locais podem ocorrer. O serviço é fornecido conforme
+        disponível, sem excluir garantias que a lei não permite afastar.
+      </p>
 
-<h2>6. Disponibilidade</h2>
-<p>O app funciona offline e não depende de servidores para seu uso principal. Podemos lançar atualizações que alterem funcionalidades, adicionem conteúdo ou modifiquem estes termos.</p>
+      <h2>9. Responsabilidade</h2>
+      <p>
+        Na medida permitida pela lei, não respondemos por danos indiretos ou
+        perda causada por uso incompatível, aparelho comprometido, serviço de
+        terceiros ou ausência de backup. Nada nestes termos limita direitos
+        obrigatórios do consumidor.
+      </p>
 
-<h2>7. Feedback</h2>
-<p>Se você enviar feedback pelo botão integrado ao app, concorda que podemos usar essas sugestões para melhorar o produto sem obrigação de atribuição ou compensação.</p>
+      <h2>10. Alterações</h2>
+      <p>
+        Podemos atualizar o app e estes termos. Mudanças relevantes serão
+        apresentadas de forma adequada, e a data acima indicará a versão
+        vigente.
+      </p>
+    </main>
 
-<h2>8. Isenção de garantias</h2>
-<p>O app é fornecido "como está". Não oferecemos garantias expressas ou implícitas sobre disponibilidade contínua, ausência de bugs ou adequação a qualquer finalidade específica.</p>
+    <main data-lang="en">
+      <h2>1. Acceptance and contact</h2>
+      <p>
+        By using falaGENKI, you agree to these terms and the Privacy Policy. The
+        app is made available under the Showa Soul brand by the individual or
+        legal entity identified as the seller on the App Store. These terms
+        supplement Apple's applicable standard license agreement and do not
+        waive mandatory consumer rights. Contact
+        <a href="mailto:showasoul@icloud.com">showasoul@icloud.com</a>.
+      </p>
 
-<h2>9. Limitação de responsabilidade</h2>
-<p>A Showa Soul não se responsabiliza por danos diretos, indiretos ou consequenciais decorrentes do uso ou impossibilidade de uso do aplicativo, incluindo perda de dados de progresso.</p>
+      <h2>2. Service</h2>
+      <p>
+        falaGENKI provides Brazilian Portuguese Japanese learning through
+        lessons, kana, spaced review, decks, reminders, and music. The free core
+        is local. The first App Store release is intended for iPhone and does
+        not include an Apple Watch app or dedicated iPad support.
+      </p>
+      <p>
+        An optional account backs up only study-plan settings — level, daily
+        time, interests, reminders, and onboarding completion. Progress, review
+        history, decks, XP, and streak remain local. An account becomes required
+        if you choose to purchase, restore, or access Fala Pro.
+      </p>
 
-<h2>10. Alterações</h2>
-<p>Podemos atualizar estes termos a qualquer momento. A versão vigente estará sempre disponível nesta página, com a data de atualização no topo.</p>
+      <h2>3. Account</h2>
+      <p>
+        You are responsible for access to your email and device security. We may
+        suspend or restrict abusive, fraudulent, or otherwise prohibited use.
+        Account deletion removes cloud login and associated data, but does not
+        automatically remove local data from this iPhone.
+      </p>
 
-<h2>11. Contato</h2>
-<p>Dúvidas sobre estes termos: <strong>showasoul@icloud.com</strong></p>
+      <h2>4. Fala Pro auto-renewing subscription</h2>
+      <p>
+        Fala Pro is optional. Before confirmation, the app and App Store show
+        the product, localized price, currency, duration, and any introductory
+        period. Your Apple Account is charged after confirmation.
+      </p>
+      <p>
+        The subscription renews automatically unless auto-renew is turned off at
+        least 24 hours before the current period ends. Your Apple Account may be
+        charged within 24 hours before renewal. Manage or cancel in Apple
+        Account settings and use Restore Purchases in the app.
+      </p>
+      <p>
+        Deleting a falaGENKI account does not cancel an Apple subscription.
+        Refunds and billing rules are handled by Apple under App Store policies.
+      </p>
 
-</div>
+      <h2>5. Premium content</h2>
+      <p>
+        Fala Pro content may require an account, active subscription, and
+        internet for download or verification. Some downloaded content may
+        remain offline for a limited period. Content may be corrected, replaced,
+        or removed when needed, subject to mandatory consumer rights.
+      </p>
 
-<!-- EN -->
-<div id="lang-en" class="lang">
+      <h2>6. Acceptable use</h2>
+      <p>
+        Use the app for personal learning. Do not copy, sell, redistribute,
+        bypass access controls, exploit vulnerabilities, overload services, or
+        use protected content and marks without permission. Third-party imports
+        must respect copyright and licenses.
+      </p>
 
-<h2>1. Acceptance</h2>
-<p>By using <strong>fala GENKI</strong>, you agree to these terms. If you do not agree, do not use the app.</p>
+      <h2>7. Intellectual property</h2>
+      <p>
+        Lessons, software, interface, illustrations, audio, marks, and
+        Daru-sensei are owned by the operator or licensed. No commercial or
+        redistribution license is granted. You keep rights to your submissions
+        while allowing feedback suggestions to be used to improve the product
+        without attribution or payment.
+      </p>
 
-<h2>2. Description of service</h2>
-<p>fala GENKI is a free Japanese-learning app for Brazilian Portuguese speakers. The app offers lessons, spaced-repetition review exercises, kana practice, and a music-based learning experience. All content works offline on your device.</p>
+      <h2>8. Education, availability, and warranties</h2>
+      <p>
+        falaGENKI is an educational aid and does not guarantee a proficiency
+        level or certification. Outages, maintenance, provider failures, and
+        local data loss may occur. The service is provided as available without
+        excluding warranties that cannot legally be waived.
+      </p>
 
-<h2>3. Acceptable use</h2>
-<p>You agree to use the app only for personal learning purposes and not to reproduce, distribute, or modify the app's content without authorization.</p>
+      <h2>9. Liability</h2>
+      <p>
+        To the extent allowed by law, we are not liable for indirect loss caused
+        by incompatible use, a compromised device, third-party services, or
+        missing backups. Mandatory consumer rights remain unaffected.
+      </p>
 
-<h2>4. Intellectual property</h2>
-<p>fala GENKI content — including lesson texts, illustrations, interface design, and the character Daru-sensei — is the property of Showa Soul. Music included in the City Pop mode is used under applicable licensing terms.</p>
+      <h2>10. Changes</h2>
+      <p>
+        We may update the app and these terms. Material changes will be
+        presented appropriately, and the date above identifies the current
+        version.
+      </p>
+    </main>
 
-<h2>5. Educational content</h2>
-<p>fala GENKI is a learning support tool. We do not guarantee specific proficiency outcomes. Content is carefully prepared but may contain inaccuracies. We do not replace formal education or certification.</p>
-
-<h2>6. Availability</h2>
-<p>The app works offline and does not depend on servers for its main functionality. We may release updates that change features, add content, or modify these terms.</p>
-
-<h2>7. Feedback</h2>
-<p>If you submit feedback through the app's built-in button, you agree that we may use those suggestions to improve the product without obligation of attribution or compensation.</p>
-
-<h2>8. Disclaimer of warranties</h2>
-<p>The app is provided "as is." We make no express or implied warranties regarding continuous availability, absence of bugs, or fitness for any particular purpose.</p>
-
-<h2>9. Limitation of liability</h2>
-<p>Showa Soul is not responsible for direct, indirect, or consequential damages arising from the use or inability to use the app, including loss of progress data.</p>
-
-<h2>10. Changes</h2>
-<p>We may update these terms at any time. The current version will always be available on this page, with the update date at the top.</p>
-
-<h2>11. Contact</h2>
-<p>Questions about these terms: <strong>showasoul@icloud.com</strong></p>
-
-</div>
-
-<footer>
-  © 2026 Showa Soul. fala GENKI.
-</footer>
-
-<script>
-  document.getElementById('date-line').textContent =
-    (document.documentElement.lang === 'pt-BR' ? 'Última atualização: ' : 'Last updated: ') +
-    'maio de 2026';
-
-  function switchLang(lang) {
-    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.lang-toggle button').forEach(el => el.classList.remove('active'));
-    document.getElementById('lang-' + lang).classList.add('active');
-    document.querySelector('.lang-toggle button[onclick*="' + lang + '"]').classList.add('active');
-  }
-</script>
-
-</body>
+    <footer data-lang="pt" class="active">
+      falaGENKI · Showa Soul · <a href="./support">Suporte</a> ·
+      <a href="./privacy">Privacidade</a>
+    </footer>
+    <footer data-lang="en">
+      falaGENKI · Showa Soul · <a href="./support">Support</a> ·
+      <a href="./privacy">Privacy</a>
+    </footer>
+    <script>
+      const buttons = document.querySelectorAll("[data-switch]");
+      const sections = document.querySelectorAll("[data-lang]");
+      buttons.forEach((button) =>
+        button.addEventListener("click", () => {
+          const lang = button.getAttribute("data-switch");
+          buttons.forEach((item) =>
+            item.setAttribute("aria-pressed", String(item === button)),
+          );
+          sections.forEach((section) =>
+            section.classList.toggle(
+              "active",
+              section.getAttribute("data-lang") === lang,
+            ),
+          );
+          document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+          document.title =
+            lang === "pt"
+              ? "Termos de Uso | falaGENKI"
+              : "Terms of Use | falaGENKI";
+        }),
+      );
+    </script>
+  </body>
 </html>
