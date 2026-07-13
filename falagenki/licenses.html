@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Licenças de terceiros | falaGENKI</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      body {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 20px 64px;
+        line-height: 1.65;
+      }
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 4px;
+      }
+      h2 {
+        font-size: 1.15rem;
+        margin-top: 32px;
+      }
+      .muted,
+      footer {
+        opacity: 0.72;
+      }
+      .switcher {
+        display: flex;
+        gap: 8px;
+        margin: 24px 0;
+      }
+      button {
+        min-height: 44px;
+        padding: 0 16px;
+        border: 1px solid currentColor;
+        border-radius: 10px;
+        background: transparent;
+        color: inherit;
+      }
+      button[aria-pressed="true"] {
+        font-weight: 700;
+      }
+      [data-lang] {
+        display: none;
+      }
+      [data-lang].active {
+        display: block;
+      }
+      a {
+        color: inherit;
+        font-weight: 600;
+      }
+      footer {
+        margin-top: 48px;
+        border-top: 1px solid color-mix(in srgb, currentColor 24%, transparent);
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 data-lang="pt" class="active">Licenças de terceiros</h1>
+    <h1 data-lang="en">Third-party licenses</h1>
+    <p data-lang="pt" class="muted active">Atualizado em 13 de julho de 2026</p>
+    <p data-lang="en" class="muted">Updated July 13, 2026</p>
+
+    <div class="switcher" aria-label="Idioma">
+      <button type="button" data-switch="pt" aria-pressed="true">Português</button>
+      <button type="button" data-switch="en" aria-pressed="false">English</button>
+    </div>
+
+    <main data-lang="pt" class="active">
+      <p>
+        O falaGENKI usa software e dados de código aberto. Os avisos abaixo
+        identificam os recursos de terceiros usados para ensinar a ordem de
+        traços dos kana e dão acesso aos termos completos e ao código-fonte
+        correspondente.
+      </p>
+
+      <h2>AnimCJK</h2>
+      <p>
+        Copyright 2016–2026 FM&amp;SH. Os SVGs que representam kana e traços são
+        disponibilizados pelo projeto AnimCJK sob a GNU Lesser General Public
+        License, versão 3 ou qualquer versão posterior. O falaGENKI carrega os
+        SVGs de kana do repositório oficial e os apresenta sem reivindicar sua
+        autoria.
+      </p>
+      <p>
+        <a href="https://github.com/parsimonhi/animCJK">Código-fonte do AnimCJK</a>
+        ·
+        <a href="https://github.com/parsimonhi/animCJK/blob/master/licenses/COPYING.txt"
+          >Aviso de direitos e licença</a
+        >
+        ·
+        <a href="https://github.com/parsimonhi/animCJK/blob/master/licenses/LGPL.txt"
+          >Texto integral da LGPL</a
+        >
+      </p>
+
+      <h2>kana-svg-data 0.0.2</h2>
+      <p>
+        Copyright Yusuke Higuchi e contribuidores. Os dados JSON usados pelo
+        falaGENKI para contar e associar traços de hiragana e katakana são
+        distribuídos sob LGPL-3.0-or-later e derivam dos dados de kana do
+        AnimCJK. O código do falaGENKI apenas adapta esses dados à interface do
+        app; as fontes originais permanecem disponíveis nos links abaixo.
+      </p>
+      <p>
+        <a href="https://github.com/hy2k/kana-svg-data">Código-fonte do kana-svg-data</a>
+        ·
+        <a href="https://www.gnu.org/licenses/lgpl-3.0.html">GNU LGPL 3.0</a>
+      </p>
+
+      <h2>Como solicitar uma cópia</h2>
+      <p>
+        Se algum link deixar de funcionar ou se você precisar de uma cópia dos
+        avisos e fontes correspondentes, escreva para
+        <a href="mailto:showasoul@icloud.com?subject=Licenças%20falaGENKI"
+          >showasoul@icloud.com</a
+        >.
+      </p>
+    </main>
+
+    <main data-lang="en">
+      <p>
+        falaGENKI uses open-source software and data. The notices below identify
+        the third-party resources used to teach kana stroke order and provide
+        access to their complete terms and corresponding source code.
+      </p>
+
+      <h2>AnimCJK</h2>
+      <p>
+        Copyright 2016–2026 FM&amp;SH. SVG files representing kana and strokes are
+        made available by the AnimCJK project under the GNU Lesser General
+        Public License, version 3 or any later version. falaGENKI loads kana SVGs
+        from the official repository and does not claim authorship of them.
+      </p>
+      <p>
+        <a href="https://github.com/parsimonhi/animCJK">AnimCJK source code</a>
+        ·
+        <a href="https://github.com/parsimonhi/animCJK/blob/master/licenses/COPYING.txt"
+          >Copyright and license notice</a
+        >
+        ·
+        <a href="https://github.com/parsimonhi/animCJK/blob/master/licenses/LGPL.txt"
+          >Full LGPL text</a
+        >
+      </p>
+
+      <h2>kana-svg-data 0.0.2</h2>
+      <p>
+        Copyright Yusuke Higuchi and contributors. The JSON data used by
+        falaGENKI to count and associate hiragana and katakana strokes is
+        distributed under LGPL-3.0-or-later and derives from AnimCJK kana data.
+        falaGENKI code only adapts the data to the app interface; the original
+        sources remain available through the links below.
+      </p>
+      <p>
+        <a href="https://github.com/hy2k/kana-svg-data">kana-svg-data source code</a>
+        ·
+        <a href="https://www.gnu.org/licenses/lgpl-3.0.html">GNU LGPL 3.0</a>
+      </p>
+
+      <h2>Requesting a copy</h2>
+      <p>
+        If a link stops working or you need a copy of the notices and
+        corresponding sources, contact
+        <a href="mailto:showasoul@icloud.com?subject=falaGENKI%20licenses"
+          >showasoul@icloud.com</a
+        >.
+      </p>
+    </main>
+
+    <footer>
+      falaGENKI · Showa Soul · <a href="./privacy">Privacidade</a> ·
+      <a href="./terms">Termos de Uso</a> · <a href="./support">Suporte</a>
+    </footer>
+
+    <script>
+      const buttons = document.querySelectorAll("[data-switch]");
+      const sections = document.querySelectorAll("[data-lang]");
+
+      function selectLanguage(lang) {
+        sections.forEach((section) => {
+          section.classList.toggle("active", section.dataset.lang === lang);
+        });
+
+        buttons.forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.switch === lang));
+        });
+
+        document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+        document.title =
+          lang === "pt"
+            ? "Licenças de terceiros | falaGENKI"
+            : "Third-party licenses | falaGENKI";
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => selectLanguage(button.dataset.switch));
+      });
+    </script>
+  </body>
+</html>
