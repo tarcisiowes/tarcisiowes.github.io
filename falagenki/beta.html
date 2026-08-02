@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Entre na lista de interesse do beta para iPhone de uma trilha de japonês explicada em português."
+    />
+    <title>Modo Nihongo | Beta para iPhone</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #080b19;
+        --surface: #11162a;
+        --surface-strong: #171d35;
+        --text: #f7f8ff;
+        --muted: #b6bed8;
+        --pink: #ff5ca8;
+        --cyan: #55e6ff;
+        --mint: #71f6bf;
+        --line: rgba(184, 200, 255, 0.2);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 8% 12%, rgba(85, 230, 255, 0.15), transparent 28rem),
+          radial-gradient(circle at 92% 18%, rgba(255, 92, 168, 0.14), transparent 26rem),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1080px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .project {
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .status {
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      main {
+        padding: 72px 0 80px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+        gap: 48px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        color: var(--cyan);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 14px 0 18px;
+        font-size: clamp(2.65rem, 7vw, 5.4rem);
+        line-height: 0.98;
+        letter-spacing: -0.055em;
+      }
+
+      .lead {
+        max-width: 680px;
+        margin: 0;
+        color: var(--muted);
+        font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .cta {
+        display: inline-flex;
+        min-height: 52px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 24px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 16px;
+        background: linear-gradient(110deg, var(--pink), #9d66ff 52%, var(--cyan));
+        box-shadow: 0 14px 44px rgba(103, 102, 255, 0.3);
+        color: #080b19;
+        font-weight: 850;
+        text-decoration: none;
+      }
+
+      .cta:focus-visible,
+      .cta:hover {
+        outline: 3px solid var(--mint);
+        outline-offset: 4px;
+      }
+
+      .microcopy {
+        max-width: 360px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .preview {
+        position: relative;
+        min-height: 410px;
+        padding: 22px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 32px;
+        background: linear-gradient(160deg, rgba(23, 29, 53, 0.94), rgba(10, 14, 30, 0.95));
+        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.38);
+      }
+
+      .preview::before {
+        position: absolute;
+        inset: -35%;
+        background: conic-gradient(from 30deg, transparent, rgba(85, 230, 255, 0.18), transparent, rgba(255, 92, 168, 0.17), transparent);
+        content: "";
+        animation: drift 18s linear infinite;
+      }
+
+      .lesson-card {
+        position: relative;
+        margin-top: 68px;
+        padding: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 24px;
+        background: rgba(17, 22, 42, 0.9);
+      }
+
+      .lesson-card strong {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--mint);
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .jp {
+        margin: 0;
+        font-size: 2.25rem;
+        font-weight: 800;
+      }
+
+      .translation {
+        margin: 2px 0 22px;
+        color: var(--muted);
+      }
+
+      .compare {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .compare span {
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 82px;
+      }
+
+      .feature {
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: rgba(17, 22, 42, 0.72);
+      }
+
+      .feature b {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.08rem;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .honesty {
+        margin-top: 64px;
+        padding: 26px;
+        border-left: 4px solid var(--cyan);
+        background: rgba(85, 230, 255, 0.07);
+      }
+
+      .honesty h2 {
+        margin: 0 0 8px;
+        font-size: 1.15rem;
+      }
+
+      .honesty p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+        justify-content: space-between;
+        padding: 24px 0 40px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      footer nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+
+      @keyframes drift {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .preview::before {
+          animation: none;
+        }
+      }
+
+      @media (max-width: 780px) {
+        .hero,
+        .features {
+          grid-template-columns: 1fr;
+        }
+
+        main {
+          padding-top: 44px;
+        }
+
+        .preview {
+          min-height: 330px;
+        }
+
+        .lesson-card {
+          margin-top: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <span class="project">Modo Nihongo</span>
+        <span class="status">Beta para iPhone · Brasil</span>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="title">
+          <div>
+            <p class="eyebrow">Japonês explicado em português</p>
+            <h1 id="title">Japonês do dia a dia, com um caminho claro.</h1>
+            <p class="lead">
+              Aprenda a ler, entender como as frases funcionam e usar japonês casual ou educado em
+              situações reais — sem depender de explicações em inglês.
+            </p>
+            <div class="cta-row">
+              <a
+                class="cta"
+                data-beta-mail
+                href="mailto:showasoul@icloud.com?subject=Quero%20participar%20do%20beta%20de%20japon%C3%AAs"
+              >Quero participar do beta</a>
+              <span class="microcopy">
+                O botão abre seu aplicativo de e-mail. Nada é enviado automaticamente. Ao enviar,
+                você autoriza apenas o contato sobre este beta e o lançamento.
+              </span>
+            </div>
+          </div>
+
+          <aside class="preview" aria-label="Exemplo de uma prática de escuta e comparação">
+            <div class="lesson-card">
+              <strong>Escute, fale e compare</strong>
+              <p class="jp" lang="ja">今日は元気です。</p>
+              <p class="translation">Hoje estou bem.</p>
+              <div class="compare" aria-hidden="true">
+                <span>1. Exemplo</span>
+                <span>2. Minha voz</span>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="features" aria-label="O que você encontrará no beta">
+          <article class="feature">
+            <b>Uma base completa para avançar</b>
+            <p>Kana, estrutura de frases, vocabulário e situações do dia a dia em uma trilha visível.</p>
+          </article>
+          <article class="feature">
+            <b>Casual ou educado?</b>
+            <p>Entenda quando o japonês muda conforme a pessoa, o contexto e o grau de proximidade.</p>
+          </article>
+          <article class="feature">
+            <b>Prática sem nota inventada</b>
+            <p>Grave sua voz no iPhone, compare com o exemplo e tente outra vez. O áudio fica local.</p>
+          </article>
+        </section>
+
+        <section class="honesty" aria-labelledby="honesty-title">
+          <h2 id="honesty-title">O que esperar desta fase</h2>
+          <p>
+            Este é um convite para testar um produto em desenvolvimento, não uma promessa de fluência
+            ou correção automática de pronúncia. O Modo Nihongo está em preparação para o lançamento.
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <span>Modo Nihongo · Showa Soul Studio</span>
+        <nav aria-label="Informações legais">
+          <a href="./privacy">Política de Privacidade</a>
+          <a href="./terms">Termos de Uso</a>
+          <a href="./support">Suporte</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script>
+      const betaLink = document.querySelector("[data-beta-mail]");
+      const allowedParams = ["utm_id", "utm_source", "utm_medium", "utm_campaign", "utm_content"];
+      const incoming = new URLSearchParams(window.location.search);
+      const campaignLines = allowedParams
+        .map((key) => [key, incoming.get(key)])
+        .filter(([, value]) => value && /^[a-z0-9_\-]{1,80}$/i.test(value))
+        .map(([key, value]) => `${key}: ${value}`);
+      const body = [
+        "Olá! Quero participar do beta para iPhone.",
+        "",
+        "Podem usar este e-mail somente para informações do beta e do lançamento.",
+        ...(campaignLines.length ? ["", "Origem do convite:", ...campaignLines] : []),
+      ].join("\n");
+      betaLink.href = `mailto:showasoul@icloud.com?subject=${encodeURIComponent(
+        "Quero participar do beta de japonês",
+      )}&body=${encodeURIComponent(body)}`;
+    </script>
+  </body>
+</html>
