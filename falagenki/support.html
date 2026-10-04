@@ -27,28 +27,6 @@
       footer {
         opacity: 0.72;
       }
-      .switcher {
-        display: flex;
-        gap: 8px;
-        margin: 24px 0;
-      }
-      button {
-        min-height: 44px;
-        padding: 0 16px;
-        border: 1px solid currentColor;
-        border-radius: 10px;
-        background: transparent;
-        color: inherit;
-      }
-      button[aria-pressed="true"] {
-        font-weight: 700;
-      }
-      [data-lang] {
-        display: none;
-      }
-      [data-lang].active {
-        display: block;
-      }
       a {
         color: inherit;
         font-weight: 600;
@@ -61,28 +39,18 @@
     </style>
   </head>
   <body>
-    <h1 data-lang="pt" class="active">Suporte do Modo Nihongo</h1>
-    <h1 data-lang="en">Modo Nihongo Support</h1>
-    <p data-lang="pt" class="muted active">Atualizado em 2 de agosto de 2026</p>
-    <p data-lang="en" class="muted">Updated August 2, 2026</p>
-    <div class="switcher" aria-label="Idioma">
-      <button type="button" data-switch="pt" aria-pressed="true">
-        Português
-      </button>
-      <button type="button" data-switch="en" aria-pressed="false">
-        English
-      </button>
-    </div>
-
-    <main data-lang="pt" class="active">
+    <h1>Suporte do Modo Nihongo</h1>
+    <p class="muted">Atualizado em 4 de outubro de 2026</p>
+    <main>
       <h2>Fale com a gente</h2>
       <p>
         Envie sua dúvida para
         <a href="mailto:showasoul@icloud.com?subject=Suporte%20Modo%20Nihongo"
           >showasoul@icloud.com</a
-        >. Para ajudar no diagnóstico, informe a versão do Modo Nihongo, o modelo
-        do iPhone, a versão do iOS e o que aconteceu. Não envie senha, código de
-        autorização da Apple, token de acesso nem dados completos de pagamento.
+        >. Para ajudar no diagnóstico, informe a versão do Modo Nihongo, o
+        modelo do iPhone, a versão do iOS e o que aconteceu. Não envie senha,
+        código de autorização da Apple, token de acesso nem dados completos de
+        pagamento.
       </p>
 
       <h2>Dispositivos compatíveis</h2>
@@ -96,16 +64,18 @@
       <p>
         Lições já disponíveis, kana, revisões e decks funcionam principalmente
         no iPhone. Internet é necessária para entrar na conta, sincronizar o
-        plano, enviar feedback, verificar ou restaurar compras e baixar conteúdo
-        Modo Pro. Antes de trocar ou apagar o aparelho, exporte qualquer deck
-        importante: o backup da conta não inclui decks nem progresso.
+        plano, enviar feedback e baixar os áudios e outros recursos que ainda
+        não estejam disponíveis localmente. Antes de trocar ou apagar o
+        aparelho, exporte qualquer deck importante: o backup da conta não inclui
+        decks nem progresso.
       </p>
 
       <h2>Conta Apple opcional</h2>
       <p>
         Na tela de conta, toque em <strong>Continuar com Apple</strong>. Você
         pode compartilhar seu e-mail ou usar o endereço privado criado pela
-        Apple. Se não quiser entrar, toque em <strong>Continuar sem conta</strong>
+        Apple. Se não quiser entrar, toque em
+        <strong>Continuar sem conta</strong>
         e siga estudando localmente.
       </p>
 
@@ -117,22 +87,21 @@
         iPhone.
       </p>
 
-      <h2>Modo Pro, compra e restauração</h2>
+      <h2>Versão gratuita e conteúdo premium futuro</h2>
       <p>
-        Entre na conta antes de assinar ou restaurar. Para recuperar uma compra
-        feita com a mesma Conta Apple, abra Modo Pro e toque em
-        <strong>Restaurar compras</strong>. Para alterar ou cancelar a
-        renovação, use <strong>Gerenciar assinatura</strong> no app ou abra
-        Ajustes do iPhone, sua Conta Apple e Assinaturas. A cobrança e os
-        reembolsos são administrados pela Apple.
+        O lançamento atual é gratuito, sem assinaturas ou compras dentro do app.
+        Planejamos lançar conteúdo premium em uma versão futura, ainda sem data
+        ou preço definidos. As condições serão informadas antes de qualquer
+        contratação. Criar uma conta ou usar esta versão não autoriza cobranças
+        futuras.
       </p>
 
       <h2>Excluir a conta</h2>
       <p>
         A opção <strong>Excluir conta</strong> fica nos ajustes da conta dentro
         do app. A exclusão remove o login e os dados associados mantidos na
-        nuvem, mas não apaga o progresso local deste iPhone e não cancela uma
-        assinatura Apple ativa. Cancele a assinatura separadamente.
+        nuvem, mas não apaga o progresso local deste iPhone. Você pode continuar
+        estudando sem conta.
       </p>
 
       <h2>Feedback, fotos e dados de uso</h2>
@@ -144,103 +113,10 @@
       </p>
     </main>
 
-    <main data-lang="en">
-      <h2>Contact us</h2>
-      <p>
-        Email
-        <a href="mailto:showasoul@icloud.com?subject=Modo%20Nihongo%20Support"
-          >showasoul@icloud.com</a
-        >. To help us diagnose an issue, include the Modo Nihongo version, iPhone
-        model, iOS version, and what happened. Never send a password, Apple
-        authorization code, access token, or complete payment details.
-      </p>
-
-      <h2>Supported devices</h2>
-      <p>
-        The first App Store release is prepared for iPhone. It does not include
-        an Apple Watch app or dedicated iPad support. The minimum iOS version
-        and compatible devices are shown on the App Store product page.
-      </p>
-
-      <h2>Local study and internet</h2>
-      <p>
-        Available lessons, kana, reviews, and decks work mainly on the iPhone.
-        Internet is required to sign in, sync the study plan, send feedback,
-        verify or restore purchases, and download Modo Pro content. Export
-        important decks before replacing or erasing the device: account backup
-        does not include decks or progress.
-      </p>
-
-      <h2>Optional Apple account</h2>
-      <p>
-        On the account screen, tap <strong>Continue with Apple</strong>. You may
-        share your email or use the private relay address created by Apple. If
-        you do not want to sign in, tap <strong>Continue without an account</strong>
-        and keep studying locally.
-      </p>
-
-      <h2>What backup saves</h2>
-      <p>
-        The current backup saves only level, daily time, interests, reminder
-        preferences, and onboarding completion. Lesson/review history, decks,
-        XP, and streak remain local on this iPhone.
-      </p>
-
-      <h2>Modo Pro, purchase, and restore</h2>
-      <p>
-        Sign in before subscribing or restoring. To recover a purchase made with
-        the same Apple Account, open Modo Pro and tap
-        <strong>Restore Purchases</strong>. To change or cancel renewal, use
-        <strong>Manage Subscription</strong> in the app or open iPhone Settings,
-        your Apple Account, and Subscriptions. Apple administers billing and
-        refunds.
-      </p>
-
-      <h2>Delete the account</h2>
-      <p>
-        <strong>Delete Account</strong> is available in the in-app account
-        settings. Deletion removes the cloud login and associated cloud data,
-        but does not erase local progress from this iPhone or cancel an active
-        Apple subscription. Cancel the subscription separately.
-      </p>
-
-      <h2>Feedback, photos, and usage data</h2>
-      <p>
-        You choose when to send feedback or attach a photo. Usage-data sharing
-        remains off until you allow it in app Settings and can be turned off
-        later. See the Privacy Policy for details.
-      </p>
-    </main>
-
-    <footer data-lang="pt" class="active">
+    <footer>
       Modo Nihongo · Showa Soul Studio · <a href="./privacy">Privacidade</a> ·
       <a href="./terms">Termos de Uso</a> ·
       <a href="./licenses">Licenças de terceiros</a>
     </footer>
-    <footer data-lang="en">
-      Modo Nihongo · Showa Soul Studio · <a href="./privacy">Privacy</a> ·
-      <a href="./terms">Terms of Use</a>
-    </footer>
-    <script>
-      const buttons = document.querySelectorAll("[data-switch]");
-      const sections = document.querySelectorAll("[data-lang]");
-      buttons.forEach((button) =>
-        button.addEventListener("click", () => {
-          const lang = button.getAttribute("data-switch");
-          buttons.forEach((item) =>
-            item.setAttribute("aria-pressed", String(item === button)),
-          );
-          sections.forEach((section) =>
-            section.classList.toggle(
-              "active",
-              section.getAttribute("data-lang") === lang,
-            ),
-          );
-          document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
-          document.title =
-            lang === "pt" ? "Suporte | Modo Nihongo" : "Support | Modo Nihongo";
-        }),
-      );
-    </script>
   </body>
 </html>

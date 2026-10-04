@@ -27,28 +27,6 @@
       footer {
         opacity: 0.72;
       }
-      .switcher {
-        display: flex;
-        gap: 8px;
-        margin: 24px 0;
-      }
-      button {
-        min-height: 44px;
-        padding: 0 16px;
-        border: 1px solid currentColor;
-        border-radius: 10px;
-        background: transparent;
-        color: inherit;
-      }
-      button[aria-pressed="true"] {
-        font-weight: 700;
-      }
-      [data-lang] {
-        display: none;
-      }
-      [data-lang].active {
-        display: block;
-      }
       a {
         color: inherit;
         font-weight: 600;
@@ -61,22 +39,9 @@
     </style>
   </head>
   <body>
-    <h1 data-lang="pt" class="active">Política de Privacidade do Modo Nihongo</h1>
-    <h1 data-lang="en">Modo Nihongo Privacy Policy</h1>
-    <p data-lang="pt" class="muted active">
-      Última atualização: 2 de agosto de 2026
-    </p>
-    <p data-lang="en" class="muted">Last updated: August 2, 2026</p>
-    <div class="switcher" aria-label="Idioma">
-      <button type="button" data-switch="pt" aria-pressed="true">
-        Português
-      </button>
-      <button type="button" data-switch="en" aria-pressed="false">
-        English
-      </button>
-    </div>
-
-    <main data-lang="pt" class="active">
+    <h1>Política de Privacidade do Modo Nihongo</h1>
+    <p class="muted">Última atualização: 4 de outubro de 2026</p>
+    <main>
       <h2>1. Quem é responsável</h2>
       <p>
         O Modo Nihongo é publicado pela Showa Soul Studio. A pessoa física ou
@@ -91,26 +56,27 @@
         O estudo principal é local. Lições, histórico de revisão, decks, XP,
         sequência e progresso permanecem no aparelho e não fazem parte do backup
         atual. Uma conta opcional criada com a Apple permite salvar na nuvem
-        somente as configurações do plano de estudo — nível, tempo diário,
-        interesses, lembretes e conclusão da configuração inicial — e é
-        necessária para comprar, restaurar e acessar o Modo Pro.
+        somente as configurações do plano de estudo: nível, tempo diário,
+        interesses, lembretes e conclusão da configuração inicial. Esta versão é
+        gratuita, sem assinaturas ou compras dentro do app.
+      </p>
+      <p>
+        Planejamos lançar conteúdo premium em uma versão futura, ainda sem data
+        ou preço definidos. Atualizaremos esta política antes de ativar compras
+        ou qualquer novo tratamento de dados relacionado a esse conteúdo. Criar
+        uma conta ou usar a versão gratuita não autoriza cobranças futuras.
       </p>
 
       <h2>3. Dados tratados</h2>
       <ul>
         <li>
           <strong>Conta:</strong> e-mail compartilhado ou endereço privado da
-          Apple, identificador de usuário e informações de sessão para login
-          com Apple.
+          Apple, identificador de usuário e informações de sessão para login com
+          Apple.
         </li>
         <li>
           <strong>Backup:</strong> nível, rotina, interesses, preferências de
           lembrete e plano de estudo quando a sincronização é usada.
-        </li>
-        <li>
-          <strong>Compras:</strong> identificador da conta, produto, situação da
-          assinatura, datas e histórico necessário para liberar ou restaurar o
-          Modo Pro. O Modo Nihongo não recebe o número do seu cartão.
         </li>
         <li>
           <strong>Feedback e suporte:</strong> mensagem enviada pelo app ou pelo
@@ -137,7 +103,7 @@
         <li>
           <strong>Segurança:</strong> identificador aleatório da instalação,
           sinais de integridade do app e do aparelho, versão, plataforma e
-          registros necessários para prevenir abuso do conteúdo premium.
+          registros necessários para prevenir abuso e proteger o serviço.
         </li>
       </ul>
 
@@ -148,56 +114,62 @@
         escolhe gravar sua voz para comparar com um exemplo da lição. Essa
         gravação fica temporariamente no app, não é enviada e, durante o uso
         normal, é removida ao sair do exercício ou substituída ao gravar de
-        novo. Se analytics estiver autorizado, registramos apenas o início, a
-        conclusão, a duração e a reprodução da comparação, nunca o áudio, o
-        caminho do arquivo, a transcrição ou a frase estudada. Lembretes são
-        agendados localmente. Outros dados locais não são apagados ao excluir a
-        conta e podem permanecer neste iPhone até você removê-los ou desinstalar
-        o app.
+        novo. Quando disponível, o reconhecimento de fala do próprio aparelho
+        pode converter temporariamente a tentativa em texto para comparar com a
+        frase; essa transcrição não é armazenada nem enviada. Se analytics
+        estiver autorizado, registramos apenas o início, a conclusão, a duração
+        e a reprodução da comparação, nunca o áudio, o caminho do arquivo, a
+        transcrição ou a frase estudada. Lembretes são agendados localmente.
+        Outros dados locais não são apagados ao excluir a conta e podem
+        permanecer neste iPhone até você removê-los ou desinstalar o app.
       </p>
 
       <h2>5. Finalidades</h2>
       <p>
-        Usamos os dados para autenticar a conta, manter backup e continuidade,
-        processar e restaurar assinaturas, entregar conteúdo premium, responder
-        feedback, medir melhorias consentidas, proteger o serviço e cumprir
-        obrigações legais. Não vendemos dados, não exibimos anúncios e não
-        usamos dados para rastreamento entre apps ou sites de outras empresas.
+        Usamos os dados para autenticar a conta, manter o backup do plano,
+        responder feedback, medir melhorias consentidas, proteger o serviço e
+        cumprir obrigações legais. Não vendemos dados, não exibimos anúncios e
+        não usamos dados para rastreamento entre apps ou sites de outras
+        empresas.
       </p>
 
       <h2>6. Prestadores e transferências</h2>
       <p>
-        Usamos Supabase para autenticação, banco, armazenamento e funções;
-        RevenueCat e Apple para compras e assinaturas; Talsec/freeRASP para
-        integridade e segurança; GitHub para entregar os arquivos abertos de
-        ordem de traços dos kana; e serviços Expo/EAS e Apple para distribuição
-        e atualização quando aplicável. Ao entregar esses arquivos, o GitHub
-        recebe metadados normais da conexão, como endereço IP e agente do
-        navegador do app. Esses prestadores podem processar dados fora do Brasil
-        conforme seus contratos, medidas de segurança e mecanismos aplicáveis
-        de transferência internacional.
+        Usamos Supabase para autenticação, banco, armazenamento e funções; Apple
+        para autenticação; Talsec/freeRASP para integridade e segurança; GitHub
+        para entregar os arquivos abertos de ordem de traços dos kana; e
+        serviços Expo/EAS e Apple para distribuição e atualização quando
+        aplicável. Ao entregar esses arquivos, o GitHub recebe metadados normais
+        da conexão, como endereço IP e agente do navegador do app. Esses
+        prestadores podem processar dados fora do Brasil conforme seus
+        contratos, medidas de segurança e mecanismos aplicáveis de transferência
+        internacional.
+      </p>
+      <p>
+        As compras pelo RevenueCat estão desativadas nesta versão. O serviço
+        pode receber o identificador da conta durante a exclusão para remover um
+        perfil eventualmente associado. Não há coleta de histórico de compras
+        para liberar conteúdo neste lançamento gratuito.
       </p>
 
       <h2>7. Retenção</h2>
       <p>
         Dados de conta e backup são mantidos enquanto a conta estiver ativa. O
         cronograma operacional previsto é de até 24 meses para feedback, 12
-        meses após o lançamento para contatos voluntários do beta, 13 meses
-        para analytics consentido e 90 dias para registros de segurança,
-        salvo quando um prazo maior for necessário por obrigação legal,
-        prevenção de fraude ou defesa de direitos. Registros enviados sem login
-        seguem o próprio ciclo de retenção e não podem ser localizados por
-        e-mail.
+        meses após o lançamento para contatos voluntários do beta, 13 meses para
+        analytics consentido e 90 dias para registros de segurança, salvo quando
+        um prazo maior for necessário por obrigação legal, prevenção de fraude
+        ou defesa de direitos. Registros enviados sem login seguem o próprio
+        ciclo de retenção e não podem ser localizados por e-mail.
       </p>
 
       <h2>8. Exclusão e seus direitos</h2>
       <p>
         Você pode excluir a conta dentro do app. Isso remove o login e os dados
-        associados mantidos pelo Modo Nihongo e solicita a remoção do perfil ligado
-        à assinatura no RevenueCat, sujeito a cópias operacionais limitadas e
-        obrigações legais. A exclusão não apaga o progresso local deste iPhone e
-        não cancela uma assinatura Apple ativa. Cancele a assinatura
-        separadamente nos ajustes da sua Conta Apple.
+        associados mantidos pelo Modo Nihongo e solicita a remoção de um perfil
+        eventualmente associado no RevenueCat, sujeito a cópias operacionais
+        limitadas e obrigações legais. A exclusão não apaga o progresso local
+        deste iPhone e permite continuar estudando sem conta.
       </p>
       <p>
         Você também pode pedir acesso, correção, informação, oposição ou
@@ -216,162 +188,10 @@
       </p>
     </main>
 
-    <main data-lang="en">
-      <h2>1. Controller</h2>
-      <p>
-        Modo Nihongo is published by Showa Soul Studio. The individual
-        or legal entity identified as the app seller on the App Store is
-        responsible for the processing described here. Contact
-        <a href="mailto:showasoul@icloud.com">showasoul@icloud.com</a> for
-        privacy questions or requests.
-      </p>
-
-      <h2>2. How the app works</h2>
-      <p>
-        The main learning experience is local. Lessons, review history, decks,
-        XP, streak, and progress remain on the device and are not part of the
-        current backup. An optional Apple-authenticated account backs up only
-        study-plan settings — level, daily time, interests, reminders, and
-        onboarding completion — and is required to purchase, restore, and
-        access Modo Pro.
-      </p>
-
-      <h2>3. Data we process</h2>
-      <ul>
-        <li>
-          <strong>Account:</strong> shared email or Apple private relay address,
-          user ID and session data.
-        </li>
-        <li>
-          <strong>Backup:</strong> level, routine, interests, reminder
-          preferences, and study plan.
-        </li>
-        <li>
-          <strong>Purchases:</strong> account ID, product, subscription status,
-          dates, and purchase history needed to unlock or restore Modo Pro. We
-          do not receive your card number.
-        </li>
-        <li>
-          <strong>Feedback and support:</strong> a message sent in the app or to
-          the support email, the sender address when you email us, source
-          screen, optional photo, and technical metadata that may include device
-          name/model, manufacturer, operating system, app version/identifier,
-          locale, time zone, and plan. Signed-in in-app feedback is linked to
-          the account; signed-out feedback is sent without the account email.
-        </li>
-        <li>
-          <strong>Beta interest:</strong> sender address, voluntary message, and
-          general campaign identifiers when you choose to email us from the beta
-          page. We use these data only to reply about testing and launch; the
-          button does not send anything automatically.
-        </li>
-        <li>
-          <strong>Usage data:</strong> with consent only, screen and
-          activity-completion events, which may include installation, session,
-          or account identifiers. Typed answers and free-form lesson content are
-          not sent.
-        </li>
-        <li>
-          <strong>Security:</strong> a random installation identifier,
-          app/device integrity signals, and related technical logs.
-        </li>
-      </ul>
-
-      <h2>4. Local data and permissions</h2>
-      <p>
-        Photo access is used only when you select an avatar or feedback
-        attachment. Microphone access is requested only when you choose to
-        record your voice for comparison with a lesson example. The recording
-        stays temporarily inside the app, is not uploaded, and during normal
-        use is removed when the exercise closes or replaced when you record
-        again. If analytics is allowed, we record only comparison start,
-        completion, duration, and playback — never audio, a file path,
-        transcription, or the studied phrase. Reminders are scheduled locally.
-        Deleting an account does not remove other local progress from this
-        iPhone.
-      </p>
-
-      <h2>5. Purposes and tracking</h2>
-      <p>
-        We process data for authentication, backup, purchases, premium delivery,
-        support, consented product improvement, security, and legal compliance.
-        We do not sell data, show ads, or track you across other companies' apps
-        or websites.
-      </p>
-
-      <h2>6. Providers and international processing</h2>
-      <p>
-        We use Supabase for authentication, database, storage, and functions;
-        RevenueCat and Apple for purchases and subscriptions; Talsec/freeRASP
-        for integrity and security; GitHub to deliver open-source kana
-        stroke-order files; and Expo/EAS and Apple distribution or update
-        services when applicable. When serving those files, GitHub receives
-        ordinary connection metadata such as the IP address and app user agent.
-        These providers may process data outside Brazil under their contracts,
-        security measures, and applicable international-transfer safeguards.
-      </p>
-
-      <h2>7. Retention</h2>
-      <p>
-        Account and backup data remain while the account is active. The planned
-        operational schedule is up to 24 months for feedback, 12 months after
-        launch for voluntary beta contacts, 13 months for consented analytics,
-        and 90 days for security logs, unless longer
-        retention is required for law, fraud prevention, or legal claims.
-        Signed-out records follow their own retention cycle and cannot be
-        located by account email.
-      </p>
-
-      <h2>8. Deletion and rights</h2>
-      <p>
-        In-app account deletion removes Modo Nihongo cloud account data and
-        requests deletion of the related RevenueCat customer profile, subject to
-        limited operational backups and legal duties. It does not erase local
-        iPhone progress or cancel an Apple subscription. Manage cancellation
-        separately in Apple Account settings. Contact us to exercise applicable
-        access, correction, objection, information, or deletion rights.
-      </p>
-
-      <h2>9. Children and changes</h2>
-      <p>
-        The app was not designed as a child-directed service. People who cannot
-        legally consent to data processing in their country should use account
-        features only with guardian authorization. Guardians may request
-        deletion. We may update this policy as the product or law changes.
-      </p>
-    </main>
-
-    <footer data-lang="pt" class="active">
+    <footer>
       Modo Nihongo · Showa Soul Studio · <a href="./support">Suporte</a> ·
       <a href="./terms">Termos de Uso</a> ·
       <a href="./licenses">Licenças de terceiros</a>
     </footer>
-    <footer data-lang="en">
-      Modo Nihongo · Showa Soul Studio · <a href="./support">Support</a> ·
-      <a href="./terms">Terms of Use</a>
-    </footer>
-    <script>
-      const buttons = document.querySelectorAll("[data-switch]");
-      const sections = document.querySelectorAll("[data-lang]");
-      buttons.forEach((button) =>
-        button.addEventListener("click", () => {
-          const lang = button.getAttribute("data-switch");
-          buttons.forEach((item) =>
-            item.setAttribute("aria-pressed", String(item === button)),
-          );
-          sections.forEach((section) =>
-            section.classList.toggle(
-              "active",
-              section.getAttribute("data-lang") === lang,
-            ),
-          );
-          document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
-          document.title =
-            lang === "pt"
-              ? "Política de Privacidade | Modo Nihongo"
-              : "Privacy Policy | Modo Nihongo";
-        }),
-      );
-    </script>
   </body>
 </html>
